@@ -11,13 +11,15 @@ LABEL maintainer='DerEnderKeks'
 COPY --from=builder /build/murmur.ini /templates/murmur.ini
 COPY --from=builder /build/murmur.x86 /usr/local/bin/murmur
 COPY ./start.sh /usr/local/bin/murmur-wrapper
+RUN chmod +x /usr/local/bin/murmur-wrapper
+
+RUN mkdir -m770 /data
+RUN chown 65521 /data
 
 VOLUME /data
 
 EXPOSE 64738/tcp
 EXPOSE 64738/udp
-
-RUN chown 65521 /data
 
 USER 65521
 

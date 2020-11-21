@@ -1,4 +1,4 @@
-# docker-murmur
+# docker-murmur [![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/derenderkeks/murmur?style=flat-square)](https://hub.docker.com/repository/docker/derenderkeks/murmur)
 
 Since I couldn't find any sane docker image for murmur I made this one.
 

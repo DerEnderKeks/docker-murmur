@@ -3,7 +3,7 @@ FROM alpine as builder
 WORKDIR /build
 
 RUN apk add --no-cache curl tar
-RUN curl -sSL https://www.mumble.info/downloads/linux-static-server | tar xj --strip 1
+RUN curl -sSL https://dl.mumble.info/latest/stable/server-linux-x86 | tar xj --strip 1
 
 FROM alpine
 LABEL maintainer='DerEnderKeks'
